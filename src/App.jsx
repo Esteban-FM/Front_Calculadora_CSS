@@ -1,25 +1,59 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from './assets/vite.svg'
+// import heroImg from './assets/hero.png'
 import './App.css'
 
 
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-bold text-white mb-4">
-          ¡Hola, mundo!
-        </h1>
-        <p className="text-slate-400 text-lg">
-          React + Vite + Tailwind v4 funcionando 🎉
-        </p>
-        <button className="mt-6 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold rounded-xl transition-colors">
-          Mi primer botón
-        </button>
+  //? Código de ejemplo para probar Tailwind CSS v4
+  //   <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+  //     <div className="text-center">
+  //       <h1 className="text-5xl font-bold text-white mb-4">
+  //         ¡Hola, mundo!
+  //       </h1>
+  //       <p className="text-slate-400 text-lg">
+  //         React + Vite + Tailwind v4 funcionando 🎉
+  //       </p>
+  //       <button className="mt-6 px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-white font-semibold rounded-xl transition-colors">
+  //         Mi primer botón
+  //       </button>
+  //     </div>
+  //   </div>
+  
+  //? Calculadora
+  <div className="App">
+    <div className="contenedor">
+      <div className="calculadora-pantalla">
+        <div className="fila">
+          <button className="button">7</button>
+          <button className="button">8</button>
+          <button className="button">9</button>
+          <button className="button">-</button>
+        </div>
+        <div className="fila">
+          <button className="button">4</button>
+          <button className="button">5</button>
+          <button className="button">6</button>
+          <button className="button">*</button>
+        </div>
+        <div className="fila">
+          <button className="button">1</button>
+          <button className="button">2</button>
+          <button className="button">3</button>
+          <button className="button">/</button>
+        </div>
+        <div className="fila">
+          <button className="button">0</button>
+          <button className="button">.</button>
+          <button className="button">+</button>
+        </div>
+          <button className="button-limpiar">C</button>
       </div>
     </div>
+  </div>
+
   )
 }
 
