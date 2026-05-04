@@ -26,6 +26,9 @@ function App() {
   <div className="App">
     <div className="contenedor">
       <div className="calculadora-pantalla">
+
+        </div>
+      <div className="contenedor-botones">
         <div className="fila">
           <button className="button">7</button>
           <button className="button">8</button>
