@@ -1,40 +1,56 @@
+import { useState } from 'react';
+import { evaluate } from 'mathjs';
+import Boton from './components/Boton';
 
 import './App.css'
 
-
 function App() {
+
+    const[pantalla, setPantalla] = useState('');
+
+
+    const agregarValor = (valor) => {
+      setPantalla(pantalla + valor);
+    }
+
+const calcularResultado = () => {
+  if (pantalla === "") return;
+  setPantalla(evaluate(pantalla).toString());
+  }
+
   return (
-  //? Calculadora
+
   <div className="App">
     <div className="contenedor">
       <div className="calculadora-pantalla">
-
+        {pantalla}
         </div>
       <div className="contenedor-botones">
         <div className="fila">
-          <button className="button">7</button>
-          <button className="button">8</button>
-          <button className="button">9</button>
-          <button className="button">-</button>
+          <Boton valor="7" onClick={agregarValor} />
+          <Boton valor="8" onClick={agregarValor} />
+          <Boton valor="9" onClick={agregarValor} />
+          <Boton valor="-" onClick={agregarValor} />
         </div>
         <div className="fila">
-          <button className="button">4</button>
-          <button className="button">5</button>
-          <button className="button">6</button>
-          <button className="button">*</button>
+          <Boton valor="4" onClick={agregarValor} />
+          <Boton valor="5" onClick={agregarValor} />
+          <Boton valor="6" onClick={agregarValor} />
+          <Boton valor="*" onClick={agregarValor} />
         </div>
         <div className="fila">
-          <button className="button">1</button>
-          <button className="button">2</button>
-          <button className="button">3</button>
-          <button className="button">/</button>
+          <Boton valor="1" onClick={agregarValor} />
+          <Boton valor="2" onClick={agregarValor} />
+          <Boton valor="3" onClick={agregarValor} />
+          <Boton valor="/" onClick={agregarValor} />
         </div>
         <div className="fila">
-          <button className="button">0</button>
-          <button className="button">.</button>
-          <button className="button">+</button>
+          <Boton valor="0" onClick={agregarValor} />
+          <Boton valor="." onClick={agregarValor} />
+          <Boton valor="=" onClick={agregarValor} />
+          <Boton valor="+" onClick={agregarValor} />
         </div>
-          <button className="button-limpiar">C</button>
+          <button className="boton-limpiar" onClick={ ()=> setPantalla('') }>C</button>
       </div>
     </div>
   </div>

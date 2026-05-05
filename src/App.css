@@ -15,7 +15,7 @@
     padding: 1rem;
 }
 
-.button{
+.boton{
     width: 70px;
     height: 70px;
     background-color: #343434;
@@ -27,6 +27,11 @@
     border-radius: 10px;
     cursor: pointer;
 }
+
+.boton:hover{
+    background-color: #6f6c6c;
+}
+
 
 .calculadora-pantalla{
     width: 100%;
@@ -54,4 +59,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+
+.boton-limpiar{
+    width: 70px;
+    height: 70px;
+    background-color: #a53434;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.boton-limpiar:hover{
+    background-color: #ff0000;
 }
