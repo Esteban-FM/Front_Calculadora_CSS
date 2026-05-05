@@ -47,10 +47,10 @@ const calcularResultado = () => {
         <div className="fila">
           <Boton valor="0" onClick={agregarValor} />
           <Boton valor="." onClick={agregarValor} />
-          <Boton valor="=" onClick={agregarValor} />
+          <Boton valor="=" onClick={calcularResultado} />
           <Boton valor="+" onClick={agregarValor} />
         </div>
-          <button className="boton-limpiar" onClick={ ()=> setPantalla('') }>C</button>
+          <button className="boton-limpiar" onClick={ ()=> setPantalla('') }>AC</button>
       </div>
     </div>
   </div>
